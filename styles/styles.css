@@ -9,15 +9,52 @@ body{
 }
 main{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header .container{
+    display: flex;
+    width: 100%;
+    height: 94px;
+    background: #562EFF;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo-section{
+    display: flex;
+    color: #FFFFFF;
     justify-content: center;
+    align-items: center;
+}
+.nav{
+    display: flex;
+}
+.nav ul{
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
+}
+.nav li{
+    list-style: none;
+}
+.nav a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.container .logo{
+    width: 39px;
+    height: 40px;
+    margin-right: 16px;
 }
 .container{
     background-color: #FFFFFF;
     border-radius: 5px;
     width: 870px;
     padding: 33px;
+    margin-top: 30px;
 }
-.players-title{
+.section-title{
     font-size: 24px;
     font-weight: 500;
     color: #562EFF;
@@ -48,6 +85,9 @@ hr{
 }
 .blogs{
     margin-top: 31px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 26px;
 }
 .blog{
     display: flex;
@@ -63,6 +103,7 @@ hr{
     font-weight: 500;
     font-size: 20px;
     color: #000000;
+    margin-bottom: 6px;
 }
 .blog-author-1{
     color: #9F9F9F;
@@ -72,4 +113,68 @@ hr{
     font-size: 16px;
     color: #562EFF;
     text-decoration: none;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+.course img{
+    width: 224px;
+    height: 104px;
+}
+.course-title{
+    color: #1E1E1E;
+    font-weight: 500;
+    font-size: 20.0336px;
+}
+.course-author a{
+    text-decoration: none;
+    color: #ED6B4F;
+}
+
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.material-symbols-outlined{
+    font-size: 12px;
+}
+.material-symbols-outlined.filled{
+    color: #FFC014;
+}
+.material-symbols-outlined.unfilled{
+    color: #AEAEAE;
+    opacity: 0.25;
+}
+.rating{
+    color: #A2A2A2;
+}
+.course-duration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FEE5DF;
+    border-radius: 14.6913px;
+    color: #FF4A60;
+}
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players ,.blogs,.courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .nav ul{
+        gap: 10px;
+    }
+    .header .container{
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width:689px) and (max-width:850px) {
+    .container{
+        width: 100%;
+    }
 }
